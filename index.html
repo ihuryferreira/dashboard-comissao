@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard de Comissão</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="box">
+        <form action="" class="forms">
+          <h1>Gráfico de Vendas</h1>
+          <label for="vendedor">Nome do Vendedor</label>
+          <input type="text" name="vendedor" id="vendedor" />
+          <label for="servico">Valor da Venda</label>
+          <input type="text" name="servico" id="servico" />
+          <input type="submit" value="Gravar dados..." />
+        </form>
+        <table id="tabela" class="tabela">
+          <thead>
+            <tr>
+              <th>Nome do Vendedor</th>
+              <!-- <th>Meta de Serviço</th> -->
+              <th>Valor da Venda</th>
+              <th>Valor da Comissão</th>
+              <th>Valor Total da Comissão</th>
+              <th>Data da Venda</th>
+              <th>Horário da venda</th>
+              <th>Excluir</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-body">
+            <!-- Os dados serão inseridos aqui -->
+          </tbody>
+        </table>
+      </div>
+      <div class="grafico">
+        <canvas id="graficoVendas"></canvas>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

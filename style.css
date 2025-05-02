@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #11032b;
+  overflow-x: hidden;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr / 1fr) 1fr;
+  grid-template-rows: minmax(240px, auto) 1fr;
+  grid-template-areas: "forms tabela";
+  height: 100%;
+  padding: 1rem 0.5rem;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.forms {
+  grid-area: forms;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.forms label {
+  font-size: 1.2rem;
+  margin-bottom: 1rem 0;
+  color: #d3d1d1;
+}
+
+.forms input[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background-color: #236cf3;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.tabela {
+  grid-area: tabela;
+  width: 96.33%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 7px;
+  background-color: #02011f;
+  border-collapse: collapse;
+}
+
+.tabela thead {
+  border-collapse: collapse;
+  padding: 0.1rem;
+  color: #ffffff;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.tabela thead tr {
+  display: table-row;
+  width: 100%;
+  border: 1px solid #000;
+  background-color: #236cf3;
+}
+.tabela tbody tr {
+  display: table-row;
+}
+.tabela thead th,
+.tabela tbody td {
+  padding: 0.5em;
+  border: 1px solid #e6e4e4c0;
+  text-align: left;
+}
+
+.tabela thead th {
+  color: #ffffff;
+}
+.tabela tbody td {
+  font-size: 1.2rem;
+}
+button {
+  background-color: #cc0e18;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.grafico {
+  display: block;
+  max-width: 700px;
+  min-height: 320px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100dvh;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .tabela {
+    width: 100%;
+    font-size: 0.5rem;
+  }
+
+  .tabela thead th,
+  .tabela tbody td,
+  .tabela tbody td button {
+    text-align: center;
+    font-size: 0.5rem;
+  }
+
+  .grafico {
+    max-width: 100%;
+    min-height: 250px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .forms input[type="submit"],
+  button {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+}
